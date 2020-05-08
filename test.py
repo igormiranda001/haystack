@@ -15,6 +15,6 @@ doc_dir = "test/samples/docs"
 # fetch_archive_from_http(url=s3_url, output_dir=doc_dir)
 write_documents_to_db(document_store=document_store, document_dir=doc_dir, clean_func=clean_wiki_text, only_empty_db=False, split_paragraphs=True)
 retriever = ElasticsearchRetriever(document_store=document_store)
-reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=False)
+reader = FARMReader(model_name_or_path="neuralmind/bert-large-portuguese-cased", use_gpu=False)
 finder = Finder(reader, retriever)
 ipdb.set_trace()
